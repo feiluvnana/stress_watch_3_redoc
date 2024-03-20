@@ -1,0 +1,40 @@
+type: object
+title: readSchoolById
+properties:
+  id:
+    type: integer
+    description: Unique identifier for the school
+  schoolName:
+    type: string
+    description: The name of the school
+  address:
+    type: string
+    description: The address of the school
+  district:
+    type: string
+    description: The district where the school is located
+  zipCode:
+    type: string
+    description: The zip code of the school's location
+  phoneNumber:
+    type: string
+    description: The phone number of the school
+  email:
+    type: string
+    format: email
+    description: The email address of the school
+  website:
+    type: string
+    format: uri
+    description: The website URL of the school
+  schoolType:
+    type: string
+    description: The type of the school (e.g., Elementary, High School, etc.)
+  createdAt:
+    type: string
+    format: date-time
+    description: The timestamp when the school record was created
+  updatedAt:
+    type: string
+    format: date-time
+    description: The timestamp when the school record was last updated

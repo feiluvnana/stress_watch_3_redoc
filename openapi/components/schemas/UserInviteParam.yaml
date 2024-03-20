@@ -1,8 +1,0 @@
-description: User invite parameters
-type: object
-properties:
-  email:
-    type: string
-  name:
-    type: string
-    nullable: true

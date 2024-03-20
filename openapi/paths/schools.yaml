@@ -1,0 +1,38 @@
+post: 
+  tags: 
+    -  schools
+  summary: Get school list
+  description: This API retrieves the list of schools associated with the current teacher, which is specified in the API key.
+  operationId: readSchools
+  requestBody: 
+    content:
+      application/json:
+        schema: 
+          $ref: '../components/schemas/Pagination.yaml'
+  responses: 
+    200: 
+      description: OK
+      content:
+        application/json:
+          schema: 
+            properties:
+              code:
+                type: integer
+              data:
+                type: array
+                items: 
+                  $ref: '../components/schemas/Media.yaml'             
+    400:
+      description: No schools were found.
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Error.yaml'
+    500:
+      description: Internal server error.
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Error.yaml'
+  security: 
+    -  access_token: []

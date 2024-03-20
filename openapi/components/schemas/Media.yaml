@@ -1,0 +1,29 @@
+type: object
+title: media
+properties:
+  publicId:
+    type: string
+  version:
+    type: integer
+  signature: 
+    type: string
+  format:
+    type: string
+  width:
+    type: integer
+  height:
+    type: integer
+  mediaType:
+    type: string
+  bytes:
+    type: integer
+  url:
+    type: string
+  originalName:
+    type: string
+  createdAt:
+    type: string
+    format: date-time
+  updatedAt:
+    type: string
+    format: date-time

@@ -1,0 +1,12 @@
+type: object
+title: error
+properties:
+  code:
+    type: integer
+    description: This is the error code.
+  message:
+    type: string
+    description: This is the error message.
+  detail:
+    type: string
+    description: This is the error detail.

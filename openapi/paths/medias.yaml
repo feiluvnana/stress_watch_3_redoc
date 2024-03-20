@@ -1,0 +1,42 @@
+post: 
+  tags: 
+    -  medias
+  summary: Upload media
+  description: This API uploads media to Cloudinary and returns the Media object.
+  operationId: createMedia
+  requestBody: 
+    content:
+      multipart/form-data:
+        schema: 
+          type: object
+          required: 
+            - media
+          properties:
+            media:
+              type: string
+              format: binary
+  responses: 
+    200: 
+      description: OK
+      content:
+        application/json:
+          schema: 
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '../components/schemas/Media.yaml'
+    400:
+      description: No media was found.
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Error.yaml'
+    500:
+      description: Upload failed.
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Error.yaml'
+  security: 
+    -  access_token: []
